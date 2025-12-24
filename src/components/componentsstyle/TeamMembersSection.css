@@ -1,0 +1,101 @@
+.members-section h2{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 80px 0 40px;
+  background: linear-gradient(90deg, #ff7eb3, #7851a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.members-section h2::after{
+content: "";
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff7eb3, #7851a9);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+
+.Members{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+.profile-card{
+  width: 230px;
+  background: linear-gradient(145deg, #2d145f, #3b1a6d);
+  border-radius: 22px;
+  padding: 25px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-card:hover{
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.image{
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #ff7eb3, #7851a9);
+}
+
+.profile-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1e0b3a;
+}
+
+.text-data{
+  margin-top: 15px;
+}
+
+.text-data .name{
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.text-data .job{
+  font-size: 14px;
+  color: #c9bfff;
+}
+
+.media-buttons{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.media-buttons a{
+  width: 38px;
+  height: 38px;
+  background: #ff7eb3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.media-buttons a:hover{
+  background: #7851a9;
+  transform: scale(1.15);
+}

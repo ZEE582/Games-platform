@@ -1,0 +1,50 @@
+[
+  { "name": "FIFA World Cup", "firstEdition": 1930 },
+  { "name": "Copa America", "firstEdition": 1916 },
+  { "name": "AFC Asian Cup", "firstEdition": 1956 },
+  { "name": "Africa Cup of Nations", "firstEdition": 1957 },
+  { "name": "Arab Cup", "firstEdition": 1963 },
+
+  { "name": "UEFA Euro", "firstEdition": 1960 },
+  { "name": "CONCACAF Gold Cup", "firstEdition": 1991 },
+  { "name": "OFC Nations Cup", "firstEdition": 1973 },
+
+  { "name": "FIFA Confederations Cup", "firstEdition": 1992 },
+  { "name": "Olympic Football Tournament", "firstEdition": 1908 },
+
+  { "name": "African Nations Championship", "firstEdition": 2009 },
+  { "name": "Gulf Cup", "firstEdition": 1970 },
+  { "name": "CECAFA Cup", "firstEdition": 1973 },
+  { "name": "WAFF Championship", "firstEdition": 2010 },
+  { "name": "EAFF Championship", "firstEdition": 2003 },
+
+  { "name": "SAFF Championship", "firstEdition": 1993 },
+  { "name": "UNCAF Nations Cup", "firstEdition": 1991 },
+  { "name": "Baltic Cup", "firstEdition": 1928 },
+  { "name": "Nordic Football Championship", "firstEdition": 1924 },
+  { "name": "Mediterranean Games Football", "firstEdition": 1951 },
+
+  { "name": "Pan Arab Games Football", "firstEdition": 1953 },
+  { "name": "Islamic Solidarity Games Football", "firstEdition": 2005 },
+  { "name": "Asian Games Football", "firstEdition": 1951 },
+  { "name": "African Games Football", "firstEdition": 1965 },
+  { "name": "Copa Centroamericana", "firstEdition": 1991 },
+
+  { "name": "Copa Caribe", "firstEdition": 1989 },
+  { "name": "Arab Nations Championship", "firstEdition": 1963 },
+  { "name": "West African Nations Cup", "firstEdition": 1983 },
+  { "name": "East African Cup", "firstEdition": 1973 },
+  { "name": "Maghreb Cup of Nations", "firstEdition": 1988 },
+
+  { "name": "Asian Youth Championship", "firstEdition": 1959 },
+  { "name": "CAF U-20 Cup of Nations", "firstEdition": 1979 },
+  { "name": "UEFA U-21 Championship", "firstEdition": 1978 },
+  { "name": "FIFA U-20 World Cup", "firstEdition": 1977 },
+  { "name": "FIFA U-17 World Cup", "firstEdition": 1985 },
+
+  { "name": "Arab Youth Championship", "firstEdition": 1983 },
+  { "name": "Arab Cup U-20", "firstEdition": 1985 },
+  { "name": "Arab Cup U-17", "firstEdition": 1991 },
+  { "name": "Asian U-23 Championship", "firstEdition": 2013 },
+  { "name": "CAF Super Cup (National Teams)", "firstEdition": 1993 }
+]

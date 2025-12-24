@@ -1,0 +1,46 @@
+.charts-section h2{
+  text-align: center;
+  font-size: 32px;
+  margin: 80px 0 40px;
+  background: linear-gradient(90deg, #ff7eb3, #7851a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.charts{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.chart-box{
+  width: 220px;
+  height: 160px;
+  background: linear-gradient(145deg, #2d145f, #3b1a6d);
+  border-radius: 20px;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: transform .4s;
+}
+
+.chart-box:hover{
+  transform: translateY(-10px);
+}
+
+.chart-box i{
+  font-size: 30px;
+  color: #ff7eb3;
+  margin-bottom: 10px;
+}
+
+.chart-box h3{
+  font-size: 32px;
+  color: #fff;
+}
+
+.chart-box p{
+  font-size: 14px;
+  color: #c9bfff;
+}

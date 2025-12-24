@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Camp Nou",
+    "country": "Spain",
+    "club": "Barcelona",
+    "capacity": 99354
+  },
+  {
+    "name": "Santiago Bernabeu",
+    "country": "Spain",
+    "club": "Real Madrid",
+    "capacity": 81044
+  },
+  {
+    "name": "Old Trafford",
+    "country": "England",
+    "club": "Manchester United",
+    "capacity": 74879
+  },
+  {
+    "name": "Anfield",
+    "country": "England",
+    "club": "Liverpool",
+    "capacity": 54074
+  },
+  {
+    "name": "Allianz Arena",
+    "country": "Germany",
+    "club": "Bayern Munich",
+    "capacity": 75000
+  }
+]

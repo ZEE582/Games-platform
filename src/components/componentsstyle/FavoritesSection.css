@@ -1,0 +1,17 @@
+/* Favorites Section */
+.favorites-section h2{
+  text-align: center;
+  font-size: 32px;
+  margin: 80px 0 40px;
+  background: linear-gradient(90deg, #ff7eb3, #7851a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.favorites{
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 60px;
+}

@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
+import Login from "./login";
+import Dashboard from "./components/dashboard/Dashboard";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import { useAuth } from "./components/hoks/useAuth";
+
+export default function App() {
+  const { loggedIn, setLoggedIn, loading } = useAuth();
+
+  if (loading) return null;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+
+        />
+
+        <Route
+          path="/login"
+          element={loggedIn ? <Navigate to="/dashbord" replace /> : <Login setLoggedIn={setLoggedIn} />}
+        />
+
+        <Route
+          path="/dashbord"
+          element={
+            <ProtectedRoute isAllowed={loggedIn}>
+              <Dashboard setLoggedIn={setLoggedIn} />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

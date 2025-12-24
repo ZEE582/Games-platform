@@ -1,0 +1,93 @@
+.layout{
+  display: flex;
+  overflow: hidden;
+ 
+}
+
+.main{
+  flex: 1;
+    height: 100vh;
+  overflow-y: auto;
+}
+
+.imge{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 3px solid rgb(39, 14, 87);
+    flex-shrink: 0;
+
+}
+.imge img{
+  width: 100%;  
+  height: 100%;
+
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+.menu{
+   position: sticky; 
+  background-color: rgb(60, 19, 72);
+    width: 60px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+ul li a svg {
+  font-size: 25px; 
+  color: inherit;  
+}
+
+
+.menu:hover{
+    width: 260px;
+}
+ul{
+    list-style: none;
+    position: relative;
+height: 95%;
+}
+ul li a{
+  display: block;
+  text-decoration: none;
+  
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  transition: .5s;
+
+}
+ul li a:hover,
+ul li a.active,
+.data .box:hover{
+  background-color: rgb(153, 71, 152);
+}
+
+
+.logout{
+    position: absolute;
+    bottom: 0;
+width: 100%;
+}
+.logout a{
+    background-color: rgb(173, 66, 203);
+}
+ul li a i{
+font-size: 25px;
+
+}

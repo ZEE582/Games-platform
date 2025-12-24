@@ -1,0 +1,49 @@
+.content{
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0 100px;
+  gap: 60px;
+}
+
+.content .text{
+  flex: 5;
+}
+
+.content .text h1 {
+      font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff7eb3, #7851a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideDown 1s forwards;
+}
+
+.content .text p {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDown 1s 0.3s forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.content .img{
+  flex: 2;
+  display: flex;
+  justify-content: flex-end; /* الصورة عاليمين */
+}
+
+.content .img img{
+  width: 350px;
+  border-radius: 50px;
+}

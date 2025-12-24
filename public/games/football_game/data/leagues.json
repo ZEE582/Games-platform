@@ -1,0 +1,50 @@
+[
+  { "name": "Premier League", "country": "England", "founded": 1992 },
+  { "name": "La Liga", "country": "Spain", "founded": 1929 },
+  { "name": "Serie A", "country": "Italy", "founded": 1898 },
+  { "name": "Bundesliga", "country": "Germany", "founded": 1963 },
+  { "name": "Ligue 1", "country": "France", "founded": 1932 },
+
+  { "name": "MLS", "country": "USA", "founded": 1993 },
+  { "name": "Saudi Pro League", "country": "Saudi Arabia", "founded": 1976 },
+
+  { "name": "Eredivisie", "country": "Netherlands", "founded": 1956 },
+  { "name": "Primeira Liga", "country": "Portugal", "founded": 1934 },
+  { "name": "Brasileirao", "country": "Brazil", "founded": 1959 },
+
+  { "name": "Argentine Primera Division", "country": "Argentina", "founded": 1891 },
+  { "name": "Scottish Premiership", "country": "Scotland", "founded": 1890 },
+  { "name": "Belgian Pro League", "country": "Belgium", "founded": 1895 },
+  { "name": "Turkish Super Lig", "country": "Turkey", "founded": 1959 },
+  { "name": "Greek Super League", "country": "Greece", "founded": 1927 },
+
+  { "name": "Swiss Super League", "country": "Switzerland", "founded": 1897 },
+  { "name": "Austrian Bundesliga", "country": "Austria", "founded": 1911 },
+  { "name": "Danish Superliga", "country": "Denmark", "founded": 1991 },
+  { "name": "Allsvenskan", "country": "Sweden", "founded": 1924 },
+  { "name": "Norwegian Eliteserien", "country": "Norway", "founded": 1937 },
+
+  { "name": "J-League", "country": "Japan", "founded": 1992 },
+  { "name": "K League 1", "country": "South Korea", "founded": 1983 },
+  { "name": "Chinese Super League", "country": "China", "founded": 2004 },
+  { "name": "A-League", "country": "Australia", "founded": 2004 },
+  { "name": "Indian Super League", "country": "India", "founded": 2014 },
+
+  { "name": "Egyptian Premier League", "country": "Egypt", "founded": 1948 },
+  { "name": "Botola Pro", "country": "Morocco", "founded": 1956 },
+  { "name": "Tunisian Ligue 1", "country": "Tunisia", "founded": 1921 },
+  { "name": "Algerian Ligue 1", "country": "Algeria", "founded": 1962 },
+  { "name": "South African Premiership", "country": "South Africa", "founded": 1996 },
+
+  { "name": "UAE Pro League", "country": "UAE", "founded": 1973 },
+  { "name": "Qatar Stars League", "country": "Qatar", "founded": 1963 },
+  { "name": "Iraqi Premier League", "country": "Iraq", "founded": 1974 },
+  { "name": "Jordan Pro League", "country": "Jordan", "founded": 1944 },
+  { "name": "Kuwait Premier League", "country": "Kuwait", "founded": 1961 },
+
+  { "name": "Liga MX", "country": "Mexico", "founded": 1943 },
+  { "name": "Chilean Primera Division", "country": "Chile", "founded": 1933 },
+  { "name": "Colombian Primera A", "country": "Colombia", "founded": 1948 },
+  { "name": "Peruvian Liga 1", "country": "Peru", "founded": 1912 },
+  { "name": "Uruguayan Primera Division", "country": "Uruguay", "founded": 1900 }
+]
