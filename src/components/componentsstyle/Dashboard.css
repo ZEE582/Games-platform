@@ -91,3 +91,52 @@ ul li a i{
 font-size: 25px;
 
 }
+
+@media (max-width: 768px){
+
+
+  .layout{
+    flex-direction: row;
+  }
+
+.menu{
+  display: none;
+}
+  
+
+
+  .main{
+    padding-left: 10px;
+  }
+
+
+  .content{
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content .img{
+    justify-content: center;
+  }
+
+  .content .img img{
+    width: 220px;
+  }
+
+  .content .text h1{
+    font-size: 28px;
+  }
+
+
+  .games{
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .game{
+    width: 150px;
+    height: 210px;
+  }
+}
+

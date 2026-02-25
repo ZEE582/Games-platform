@@ -1,7 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import './Login.css';
 import { supabase } from "./lib/supabase";
 import { useState } from "react";
+import { METHODS } from "http";
 
 type LoginProps = {
   setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,23 +13,23 @@ export default function Login({ setLoggedIn }: LoginProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
 
-    // const { error } = await supabase.auth.signInWithPassword({
-    //   email,
-    //   password,
-    // });
+  const handleLogin = async (event: React.FormEvent) => {
+    event.preventDefault();
 
-    // if (error) {
-    //   alert(error.message);
-    // } else {
-    //   setLoggedIn(true);
-    //   navigate("/dashbord"); 
-    // }
- 
- setLoggedIn(true);
-    navigate("/dashbord");  };
+    await fetch("https://694b5c9e26e870772067e469.mockapi.io/po/users",{
+      method:"post",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        "Email":email,
+        "Password":password
+      })
+    }).then((response)=>response.json())
+    setLoggedIn(true);
+   navigate("/dashbord");
+  };
 
   const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
@@ -48,12 +49,12 @@ export default function Login({ setLoggedIn }: LoginProps) {
     <form onSubmit={handleLogin}>
       <div className="input-box">
         <i className="fa-solid fa-envelope"></i>
-        <input type="email" placeholder="Email" required value={email} onChange={(e)=>setEmail(e.target.value)} />
+        <input type="email" placeholder="Email" required value={email} onChange={(event)=>setEmail(event.target.value)} />
       </div>
 
       <div className="input-box">
         <i className="fa-solid fa-lock"></i>
-        <input type="password" placeholder="Password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
+        <input type="password" placeholder="Password" required value={password} onChange={(event)=>setPassword(event.target.value)} />
       </div>
 
       <button type="submit">Login</button>

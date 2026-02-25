@@ -1,24 +1,31 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
-import Login from "./login";
-import Dashboard from "./components/dashboard/Dashboard";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { supabase } from "./lib/supabase";
+import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import { useAuth } from "./components/hoks/useAuth";
+import Login from "./login";
+import Dashbord from "./components/dashboard/Dashboard";
 
 export default function App() {
-  const { loggedIn, setLoggedIn, loading } = useAuth();
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  if (loading) return null;
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setLoggedIn(!!data.session);
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setLoggedIn(!!session);
+    });
+
+    return () => {
+      listener.subscription.unsubscribe();
+    };
+  }, []);
 
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-
-        />
-
         <Route
           path="/login"
           element={loggedIn ? <Navigate to="/dashbord" replace /> : <Login setLoggedIn={setLoggedIn} />}
@@ -28,11 +35,13 @@ export default function App() {
           path="/dashbord"
           element={
             <ProtectedRoute isAllowed={loggedIn}>
-              <Dashboard setLoggedIn={setLoggedIn} />
+              <Dashbord setLoggedIn={setLoggedIn} />
             </ProtectedRoute>
           }
         />
+
+        <Route path="*" element={<Navigate to={loggedIn ? "/dashbord" : "/login"} replace />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
