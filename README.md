@@ -46,10 +46,6 @@ npm install
 npm start
 ```
 
-## 🌐 التشغيل
-
-افتح المتصفح وانتقل إلى: http://localhost:3000
-
 ## 📁 هيكل المشروع
 
 ```
@@ -79,7 +75,7 @@ MIT License
 
 ## 👨‍💻 المطورون
 
-- **ناضا نور** - Front-End Developer
-- **أحمد هناني** - Front-End Developer
-- **وائل محمد** - Front-End Developer
-- **يوسف** - Front-End Developer
+- **ندى نور** - Front-End Developer
+- **أحمد حنني** - Front-End Developer
+- **وسيم محمد** - Front-End Developer
+- **يوسف بني فضل** - Front-End Developer
