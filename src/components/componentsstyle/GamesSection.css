@@ -1,0 +1,94 @@
+.games{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 25px;
+
+}
+.gamess h2 {
+    text-align: center; 
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff7eb3;
+    background: linear-gradient(90deg, #ff7eb3, #7851a9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+
+.game{
+ width: 190px;
+ height: 250px;
+ perspective: 1000px;
+ position: relative;
+    
+  
+}
+/* Favorite Button */
+.fav-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #ff7eb3;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  z-index: 10;
+  transition: transform .3s, color .3s;
+}
+
+.fav-btn:hover{
+  transform: scale(1.2);
+}
+
+.fav-btn{
+  color: gold;
+}
+
+.game .front ,
+.game .back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease-in-out;
+
+}
+.game .front {
+  background-color: #151515;
+  color: white;
+}
+
+.game .back {
+  background-color: #e366ff;
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.game:hover .front {
+  transform: rotateY(180deg);
+}
+
+
+
+.game:hover .back {
+  transform: rotateY(360deg);
+}
+ .game img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import "./componentsstyle/Dashboard.css"
+=======
+import "../componentsstyle/Dashboard.css"
+>>>>>>> bb96d04d5498d38c4b7b2d423b15f15c16597d38
 
 import SideMenu from "./SideMenu";
 import HomeSection from "./HomeSection";
