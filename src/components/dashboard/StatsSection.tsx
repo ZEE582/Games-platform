@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import "./componentsstyle/StatsSection.css";
-=======
-import "../componentsstyle/StatsSection.css";
->>>>>>> bb96d04d5498d38c4b7b2d423b15f15c16597d38
 type Props = {
   visits: number;
   users: number;

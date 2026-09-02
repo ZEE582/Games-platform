@@ -1,9 +1,5 @@
 import MemberCard from "./MemberCard";
-<<<<<<< HEAD
 import "./componentsstyle/TeamMembersSection.css";
-=======
-import "../componentsstyle/TeamMembersSection.css";
->>>>>>> bb96d04d5498d38c4b7b2d423b15f15c16597d38
 type Member = {
   id: number;
   name: string;
