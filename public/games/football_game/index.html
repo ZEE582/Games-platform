@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تحدي كرة القدم</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-card">
+
+  <div class="logo">⚽</div>
+
+  <h1>تحدي كرة القدم</h1>
+
+  <div id="menu">
+    <select onchange="setLevel(this.value)">
+      <option value="easy">سهل</option>
+      <option value="medium">متوسط</option>
+      <option value="hard">صعب</option>
+    </select>
+    <button onclick="startGame()">ابدأ التحدي</button>
+    <div class="high">أعلى نتيجة <span id="highScore">0</span></div>
+  </div>
+
+  <div id="game" class="hidden">
+    <div class="info">
+      <span>الوقت <span id="time">0</span></span>
+      <span>النتيجة <span id="score">0</span></span>
+    </div>
+    <div id="question" class="question"></div>
+    <div class="options">
+      <button id="o0" onclick="answer(0)"></button>
+      <button id="o1" onclick="answer(1)"></button>
+      <button id="o2" onclick="answer(2)"></button>
+      <button id="o3" onclick="answer(3)"></button>
+    </div>
+  </div>
+
+  <div id="end" class="hidden">
+    <h2 id="finalScore"></h2>
+    <button onclick="location.reload()">إعادة اللعب</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

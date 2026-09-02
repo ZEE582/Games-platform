@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سباق الأذكار</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+  <h1>سباق الأذكار</h1>
+  <p class="sub">تمرين ينشط أصابعك وينعش قلبك بالذكر</p>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="value" id="letters">0</span>
+      <span class="label">عدد الحروف</span>
+    </div>
+    <div class="stat">
+      <span class="value" id="accuracy">0%</span>
+      <span class="label">الدقة</span>
+    </div>
+    <div class="stat">
+      <span class="value" id="speed">0</span>
+      <span class="label">الكلمة/الثانية</span>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">1:00</div>
+
+  <div class="zekr-box zekr-small" id="zekrText">اضغط ذكر جديد</div>
+
+  <textarea id="userInput" placeholder="ابدأ بكتابة الذكر هنا" aria-label="حقل كتابة الذكر"></textarea>
+
+  <div class="btns">
+    <button id="newZekr" class="btn-new">ذكر جديد</button>
+    <button id="reset" class="btn-reset">إعادة</button>
+  </div>
+</main>
+
+<script src="azkar.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

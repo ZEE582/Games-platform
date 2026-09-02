@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <p>Choose your move:</p>
+    <div class="buttons">
+        <button onclick="playGame('rock')">&#x1F44A;</button>
+        <button onclick="playGame('paper')">&#x1f590;</button>
+        <button onclick="playGame('scissors')">&#x270c;</button>
+    </div>
+
+    <p class="resulte">resulte:</p>
+    <p class="moves">moves:</p>
+    <p class="score">score:</p>
+
+    <button id="rs" onclick="resetScore()">Reset Score</button>
+
+    <script>
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        };
+
+        function pickComputerMove() {
+            const randomNumber = Math.random();
+            if (randomNumber < 1/3) return 'rock';
+            else if (randomNumber < 2/3) return 'paper';
+            else return 'scissors';
+        }
+
+        function playGame(playerMove) {
+
+            const computerMove = pickComputerMove();
+            let result = '';
+
+            if (playerMove === computerMove) {
+                result = 'tie';
+            } else if (
+                (playerMove === 'rock' && computerMove === 'scissors') ||
+                (playerMove === 'paper' && computerMove === 'rock') ||
+                (playerMove === 'scissors' && computerMove === 'paper')
+            ) {
+                result = 'win';
+            } else {
+                result = 'lose';
+            }
+
+            if (result === 'win') score.wins++;
+            if (result === 'tie') score.ties++;
+            if (result === 'lose') score.losses++;
+
+            localStorage.setItem('score', JSON.stringify(score));
+
+            updateScoreElement(result, playerMove, computerMove);
+        }
+
+        function updateScoreElement(result, playerMove, computerMove) {
+            document.querySelector('.resulte').textContent =
+                `Result: You ${result}!`;
+
+            document.querySelector('.moves').textContent =
+                `You: ${playerMove} — Computer: ${computerMove}`;
+
+            document.querySelector('.score').textContent =
+                `Wins: ${score.wins} | Losses: ${score.losses} | Ties: ${score.ties}`;
+        }
+
+        function resetScore() {
+            score = { wins: 0, losses: 0, ties: 0 };
+            localStorage.removeItem('score');
+            updateScoreElement("","","");
+        }
+    </script>
+</body>
+</html>
