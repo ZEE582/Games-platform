@@ -21,7 +21,7 @@
 
 - **React** - إطار عمل JavaScript
 - **TypeScript** - لغة برمجة آمنة
-- **Supabase** - قاعدة بيانات وأمان
+- **Firebase** - قاعدة بيانات وأمان
 - **Material UI** - تصميم واجهة المستخدم
 - **React Router** - إدارة المسارات
 
@@ -55,7 +55,7 @@ src/
 │   ├── dashboard/     # لوحة التحكم
 │   └── hoks/          # React Hooks
 ├── lib/
-│   └── supabase.ts    # إعدادات Supabase
+│   └── firebase.ts    # إعدادات Firebase
 ├── public/
 │   └── games/         # ألعاب المتصفح
 └── App.tsx            # المكون الرئيسي

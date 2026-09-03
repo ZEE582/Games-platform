@@ -1,22 +1,19 @@
 import { useEffect, useState } from "react";
-import { supabase } from "../../lib/supabase";
+import { auth } from "../../lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 export function useAuth() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setLoggedIn(!!data.session);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setLoggedIn(!!user);
       setLoading(false);
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setLoggedIn(!!session);
-    });
-
     return () => {
-      listener.subscription.unsubscribe();
+      unsubscribe();
     };
   }, []);
 

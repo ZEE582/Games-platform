@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { supabase } from "./lib/supabase";
-import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
+import { auth } from "./lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import Login from "./login";
 import Dashbord from "./components/dashboard/Dashboard";
@@ -10,16 +10,12 @@ export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setLoggedIn(!!data.session);
-    });
-
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setLoggedIn(!!session);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setLoggedIn(!!user);
     });
 
     return () => {
-      listener.subscription.unsubscribe();
+      unsubscribe();
     };
   }, []);
 

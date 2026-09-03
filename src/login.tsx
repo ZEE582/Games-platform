@@ -1,8 +1,8 @@
 import { useNavigate  } from "react-router-dom";
 import './Login.css';
-import { supabase } from "./lib/supabase";
+import { auth } from "./lib/firebase";
 import { useState } from "react";
-import { METHODS } from "http";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 type LoginProps = {
   setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
@@ -32,11 +32,14 @@ export default function Login({ setLoggedIn }: LoginProps) {
   };
 
   const handleGoogleLogin = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
-    if (error) {
-      alert(error.message);
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      setLoggedIn(true);
+      navigate("/dashbord");
+    } catch (error) {
+      alert("Failed to login with Google");
     }
-
   };
 
   return (
