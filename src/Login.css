@@ -76,3 +76,34 @@ button{
 button:hover{
   background: #7851a9;
 }
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 320px;
+    padding: 30px 25px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    width: 280px;
+    padding: 25px 20px;
+  }
+
+  .login-box h2 {
+    font-size: 22px;
+  }
+
+  .login-box p {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
